@@ -136,3 +136,9 @@ const updateGradient = () => {
 };
 color1.addEventListener('input', updateGradient);
 color2.addEventListener('input', updateGradient);
+
+const opacitySlider = document.getElementById('opacity-slider') as HTMLInputElement;
+
+opacitySlider.addEventListener('input', () => {
+    document.documentElement.style.setProperty('--glass-opacity', opacitySlider.value);
+});
