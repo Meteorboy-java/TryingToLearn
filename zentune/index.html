@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenTune</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="sidebar glass">
+        <div class="nav-item" id="add-folder-btn">
+            <span class="nav-text">📁 Add Folder</span>
+        </div>
+        <div id="folder-list"></div>
+    </nav>
+
+    <main class="main-content">
+        <header class="top-bar glass">
+    <div class="controls-group">
+        <span style="font-size: 14px; color: var(--text-secondary);">Glass:</span>
+        <input type="range" id="opacity-slider" min="0" max="0.3" step="0.01" value="0.05">
+        
+        <span style="font-size: 14px; color: var(--text-secondary); margin-left: 16px;">Theme:</span>
+        <input type="color" id="color1" value="#1a1a2e">
+        <input type="color" id="color2" value="#16213e">
+    </div>
+</header>
+
+        <div class="player-area">
+            <section class="album-view glass">
+                <img id="album-art" class="album-art" src="" alt="Album Art" style="display: none;">
+                <div id="placeholder-art" class="album-art"></div>
+                <div class="track-info">
+                    <div id="track-title" class="track-title">Select a track</div>
+                    <div id="track-artist" class="track-artist">To begin listening</div>
+                </div>
+            </section>
+
+            <section class="lyrics-view glass" id="lyrics-container">
+                <!-- Lyrics inject here -->
+            </section>
+        </div>
+
+        <footer class="bottom-bar glass">
+            <audio id="audio-player" style="display: none;"></audio>
+            <div class="controls">
+                <button class="play-btn" id="play-pause-btn">▶</button>
+            </div>
+            <div class="progress-container">
+                <span id="time-current">0:00</span>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span id="time-total">0:00</span>
+            </div>
+        </footer>
+    </main>
+    <script type="module" src="./main.ts"></script>
+</body>
+</html>
